@@ -14,16 +14,22 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
 
+    // provideHttpClient(),
+    // provideTranslateService({
+    //   loader: provideTranslateHttpLoader({
+    //     // prefix: '/assets/i18n/',
+    //     // suffix: '.json'
+    //     prefix: './i18n/',
+    //     suffix: '.json'
+    //   }),
+    //   fallbackLang: 'en',
+    //   lang: 'en'
+    // })
     provideHttpClient(),
     provideTranslateService({
-      loader: provideTranslateHttpLoader({
-        // prefix: '/assets/i18n/',
-        // suffix: '.json'
-        prefix: './i18n/',
-        suffix: '.json'
-      }),
-      fallbackLang: 'en',
-      lang: 'en'
+      loader: provideTranslateHttpLoader({prefix:'./i18n/', suffix:'.json'}),
+      fallbackLang: 'en'
     })
+    
   ]
 };

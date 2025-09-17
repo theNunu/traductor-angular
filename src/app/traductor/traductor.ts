@@ -5,7 +5,6 @@ import {
 } from "@ngx-translate/core";
 
 
-
 @Component({
   selector: 'app-traductor',
   imports: [],
