@@ -14,15 +14,12 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
 
-    provideTranslateService({
-      fallbackLang: 'en',
-      lang: 'en'
-    }),
-
     provideHttpClient(),
     provideTranslateService({
       loader: provideTranslateHttpLoader({
-        prefix: '/assets/i18n/',
+        // prefix: '/assets/i18n/',
+        // suffix: '.json'
+        prefix: './i18n/',
         suffix: '.json'
       }),
       fallbackLang: 'en',
